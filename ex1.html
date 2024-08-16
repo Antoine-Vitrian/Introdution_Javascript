@@ -1,12 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script >
+        function idade() {
+    const idade = parseInt(document.getElementById('idade').value);
+    if(idade>18) {
+        alert("Entrada para o evento finalizada com sucesso!");
+    } else if(idade==17) {
+        alert("Desculpe, mas você não pode participar do evento, volte ano que vem.");
+    } else {
+        alert("Você não possui idade suficiente para entrar no evento");
+    }
+}
+    </script>
+    <link rel="stylesheet" href="idade.css">
 </head>
 <body>
-    Calculadora de soma
-    <script src="ex1_Victor.js"></script>
+    <div class="titulo"> Verificação de idade: </div>
+    <div class="formulario">
+        <input type="number" placeholder="Digite sua idade" id="idade" class="idade">
+        <button onclick="idade()" class="botao"> Verificar </button>
+    </div>
+
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Acesso</title>
+    <script>
+        function verificarIdade() {
+            // Obtendo o valor da idade inserida pelo usuário
+            const idade = parseInt(document.getElementById('idade').value);
+
+            // Verificando a idade e exibindo a mensagem apropriada
+            if (idade >= 18) {
+                alert("Você é maior de idade e tem permissão para entrar no evento!");
+            } else {
+                alert("Você é menor de idade e não tem permissão para entrar no evento!");
+            }
+        }
+    </script>
+</head>
